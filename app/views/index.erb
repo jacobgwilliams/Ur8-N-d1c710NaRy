@@ -5,11 +5,13 @@
   </form>
 </div>
 
-<% if @term && @definition %>
+<% if @term && @definition && @l33t_term && @l33t_definition %>
   <div class="result">
     <dl>
       <dt><%= @term %></dt>
       <dd><%= @definition %></dd>
+      <dt><%= @l33t_term %></dt>
+      <dd><%= @l33t_definition %></dd>
     </dl>
   </div>
 <% end %>
