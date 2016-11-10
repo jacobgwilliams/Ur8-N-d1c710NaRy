@@ -7,9 +7,7 @@
     See: http://necolas.github.com/normalize.css/
   -->
   <link rel="stylesheet" href="/css/normalize.css">
-  <!--
-    application.css is where you put your styles
-  -->
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="/js/jquery.js"></script>
@@ -18,20 +16,10 @@
   <title></title>
 </head>
 <body>
-  <h1><a href="/">ur8@n d1C710n@ry</a></h1>
-  <h2>17\'5 ur8@n d1C710n@ry f0R L337 P33p$ n0 n0o85 plz</h2>
-  <nav>
-    <ul>
-      <!-- <% if logged_in? %> -->
-      <!-- <li><%= current_user.username %></li> | -->
-      <li><a href="/sessions/logout">Logout</a></li>
-      <!-- <% else %> -->
-      <li><a href="/sessions/new">Login</a></li> |
-      <li><a href="/users/new">Register</a></li>
-      <!-- <% end %> -->
-    </ul>
-  </nav>
-  <hr>
+  <header>
+    <h1><a href="/">ur8@n d1C710n@ry</a></h1>
+    <h2><marquee>17\'5 ur8@n d1C710n@ry f0R L337 P33p$ n0 n0o85 plz</marquee></h2>
+  </header>
   <%= yield %>
 </body>
 </html>
