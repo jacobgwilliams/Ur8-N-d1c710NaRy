@@ -16,6 +16,8 @@ require 'pry-byebug'
 
 require 'bcrypt'
 
+require 'unirest'
+
 require 'pg'
 require 'active_record'
 require 'logger'

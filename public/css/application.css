@@ -9,7 +9,7 @@ header {
   padding: 10px;
 }
 
-.search {
+.search, .result {
     margin: auto;
     width: 50%;
     border: 3px solid green;
@@ -26,4 +26,9 @@ header {
     margin: auto;
     padding: 10px;
     color: blue;
+}
+
+nav > ul {
+  float: right;
+  list-style-type: none;
 }

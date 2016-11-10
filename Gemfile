@@ -20,6 +20,8 @@ gem 'bcrypt'
 gem 'pry'
 gem 'pry-byebug'
 
+gem 'unirest'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

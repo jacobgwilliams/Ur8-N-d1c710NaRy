@@ -1,6 +1,15 @@
 <div class="search">
-  <form action='https://mashape-community-urban-dictionary.p.mashape.com/define' method='GET'>
+  <form action='/search' method='POST'>
     <input type='text' name='term' placeholder='3N73R @ W0rd'>
     <input type='submit' value='D3f1N3' id='define-button'>
   </form>
 </div>
+
+<% if @term && @definition %>
+  <div class="result">
+    <dl>
+      <dt><%= @term %></dt>
+      <dd><%= @definition %></dd>
+    </dl>
+  </div>
+<% end %>
