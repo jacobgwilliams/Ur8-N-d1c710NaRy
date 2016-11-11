@@ -10,10 +10,15 @@ post '/search' do
     "X-Mashape-Key" => "lXGPLVSl4Wmshz5shjSmDsGIqYRbp1twZxWjsnzU4ZoARA8RtB",
     "Accept" => "text/plain"
   }
-  @term = response.body["list"][0]["word"]
-  @definition = response.body["list"][0]["definition"]
-
-  @l33t_term = params[:term]
+  # binding.pry
+  if response.body["result_type"] == "no_results"
+    @term = "no results"
+    @definition = "try again, noob"
+  else
+    @term = response.body["list"][0]["word"]
+    @definition = response.body["list"][0]["definition"]
+  end
+  @l33t_term = @term
   @l33t_term = @l33t_term.split.join("+")
   response = Unirest.get "https://montanaflynn-l33t-sp34k.p.mashape.com/encode?text=#{@l33t_term}",
   headers:{
