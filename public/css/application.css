@@ -45,6 +45,10 @@ nav > ul {
   max-width: 20%;
 }
 
+nav > ul > li {
+  padding-bottom: 10px;
+}
+
 .hidden {
   display: none;
 }

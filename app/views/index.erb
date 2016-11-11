@@ -18,6 +18,15 @@
         <dd><%= @l33t_definition %></dd>
       </article>
     </dl>
+    <% if logged_in? %>
+
+      <form method='POST' action='/faved_definitions'>
+        <input type="hidden" name="fav_def[word]" value="<%= @term %>">
+        <input type="hidden" name="fav_def[definition]" value="<%= @definition %>">
+        <input type="submit" value="<%= l33tify("save to favorites") %>">
+      </form>
+
+    <% end %>
     <a href='' id='translate_to_noob'>(translate to n00b)</a>
     <a href='' id='translate_to_leet' class='hidden'><%= l33tify("u want it leet") + "!!!1!?" %></a>
   </div>
