@@ -22,6 +22,8 @@ gem 'pry-byebug'
 
 gem 'unirest'
 
+gem 'grabzit'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

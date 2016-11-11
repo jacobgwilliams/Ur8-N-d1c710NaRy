@@ -1,0 +1,7 @@
+<div class="dashboard-container">
+  <h1><%= l33tify(@faved_definition.word) %></h1>
+  <p><%= l33tify(@faved_definition.definition) %></p>
+  <em>Definition favorited by <%= @user.username %> on <%= @faved_definition.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+    <br><br>
+  <a href='/users/new'><%= l33tify("Sign up to start sharing your l33t URBAN DICTIONARY WORDS") %>!!!!111</a>
+</div>

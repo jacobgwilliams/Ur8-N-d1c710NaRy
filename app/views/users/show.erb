@@ -1,0 +1,30 @@
+<div class="dashboard-container">
+  <h1><%= l33tify(@user.username) + "'s " + l33tify("Favorites") %></h1>
+  <% if @user.faved_definitions.any? == false %>
+  <p><%= l33tify("No favorites yet") + "!!!11;)" %></p>
+  <% else %>
+  <p>Share your favorites list with a friend!</p>
+  <dl>
+    <% @user.faved_definitions.each do |definition| %>
+      <div class="single-result">
+        <article class="noob_def hidden">
+          <dt><%= definition.word %></dt>
+          <dd><%= definition.definition %></dd>
+        </article>
+        <article class="l33t_def">
+          <dt><%= l33tify(definition.word) %></dt>
+          <dd><%= l33tify(definition.definition) %></dd>
+        </article>
+        <a href='' class='translate_to_noob'>(translate to n00b)</a>
+        <a href='' class='translate_to_leet hidden'><%= l33tify("u want it leet") + "!!!1!?" %></a>
+        <br>
+        <a href="/users/<%=@user.id%>/faved_definitions/<%=definition.id%>">Shareable link</a>
+      </div>
+      <br>
+      <br>
+    <% end %>
+  </dl>
+  <% end %>
+</div>
+
+
