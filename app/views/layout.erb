@@ -17,17 +17,17 @@
 </head>
 <body>
   <header>
-    <h1><a href="/">ur8@n d1C710n@ry</a></h1>
-    <h2><marquee>17\'5 ur8@n d1C710n@ry f0R L337 P33p$ n0 n0o85 plz</marquee></h2>
+    <h1><a href="/"><%= l33tify("Urban Dictionary") %></a></h1>
+    <h2><marquee><%= l33tify("it's urban dictionary for leet people no noobs please") %></marquee></h2>
     <nav>
       <ul>
         <% if logged_in? %>
         <li><%= l33t_greet %></li>
-        <li><a href="/sessions/logout">log0u7</a></li>
-        <li><a href="/users/show">f@voR1t3$</a></li>
+        <li><a href="/sessions/logout"><%= l33tify("logout") %></a></li>
+        <li><a href="/users/show"><%= l33tify("favorites") %></a></li>
         <% else %>
-        <li><a href="/sessions/new">L0G1n</a></li>
-        <li><a href="/users/new">r3G1573r</a></li>
+        <li><a href="/sessions/new"><%= l33tify("login") %></a></li>
+        <li><a href="/users/new"><%= l33tify("register") %></a></li>
         <% end %>
       </ul>
     </nav>

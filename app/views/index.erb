@@ -1,8 +1,8 @@
 <div class="search">
-  <h1>l3@Rn @ w0rd</h1>
+  <h1><%= l33tify("learn a word") %></h1>
   <form action='/search' method='POST'>
-    <input type='text' name='term' placeholder='3N73R @ W0rd'>
-    <input type='submit' value='D3f1N3' id='define-button'>
+    <input type='text' name='term' placeholder="<%= l33tify("enter a word") %>">
+    <input type='submit' value="<%= l33tify("define") %>" id='define-button'>
   </form>
 </div>
 
@@ -19,6 +19,6 @@
       </article>
     </dl>
     <a href='' id='translate_to_noob'>(translate to n00b)</a>
-    <a href='' id='translate_to_leet' class='hidden'>(u W@n7 1t l33t!?)</a>
+    <a href='' id='translate_to_leet' class='hidden'><%= l33tify("u want it leet") + "!!!1!?" %></a>
   </div>
 <% end %>

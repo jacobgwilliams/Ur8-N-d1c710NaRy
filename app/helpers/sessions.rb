@@ -10,10 +10,9 @@ def require_login
   redirect '/sessions/new' unless logged_in?
 end
 
-def l33t_username
-  require_login
-  username = current_user.username.split.join("+")
-  response = Unirest.get "https://montanaflynn-l33t-sp34k.p.mashape.com/encode?text=#{username}",
+def l33tify(term_or_phrase)
+  convertable_thing = term_or_phrase.split.join("+")
+  response = Unirest.get "https://montanaflynn-l33t-sp34k.p.mashape.com/encode?text=#{convertable_thing}",
   headers:{
     "X-Mashape-Key" => "lXGPLVSl4Wmshz5shjSmDsGIqYRbp1twZxWjsnzU4ZoARA8RtB",
     "Accept" => "text/plain"
@@ -21,6 +20,11 @@ def l33t_username
   response.body
 end
 
+def l33t_username
+  require_login
+  l33tify(current_user.username)
+end
+
 def l33t_greet
-  "w3LC0m3, " + l33t_username
+  l33tify("welcome") + ", " + l33t_username
 end
