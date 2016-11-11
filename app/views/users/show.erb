@@ -17,6 +17,8 @@
         </article>
         <a href='' class='translate_to_noob'>(translate to n00b)</a>
         <a href='' class='translate_to_leet hidden'><%= l33tify("u want it leet") + "!!!1!?" %></a>
+        <br>
+        <a href="/users/<%=@user.id%>/faved_definitions/<%=definition.id%>">Shareable link</a>
       </div>
       <br>
       <br>
@@ -24,6 +26,5 @@
   </dl>
   <% end %>
 </div>
-
 
 

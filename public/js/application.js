@@ -16,4 +16,9 @@ $(document).ready(function() {
     $(this).siblings('.l33t_def').removeClass('hidden');
     $(this).prev().removeClass('hidden');
   })
+
+  $(document).on('click', '.screenshot', function(event){
+    event.preventDefault();
+    // html2canvas(element, options);
+  })
 });

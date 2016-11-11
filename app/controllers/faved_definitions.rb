@@ -10,3 +10,9 @@ get '/users/:id/faved_definitions' do
   @user = User.find_by(id: params[:id])
   erb :'users/show'
 end
+
+get '/users/:user_id/faved_definitions/:id' do
+  @faved_definition = FavedDefinition.find_by(id: params[:id])
+  @user = User.find_by(id: params[:user_id])
+  erb :'faved_definitions/show'
+end

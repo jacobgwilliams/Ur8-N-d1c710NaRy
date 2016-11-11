@@ -30,8 +30,11 @@ def l33t_greet
 end
 
 def text_to_image
-  response = Unirest.post "http://api.img4me.com/?text=Testing&font=arial&fcolor=000000&size=10&bcolor=FFA500&type=png",
-  headers:{
-    "Accept" => "text/plain"
-  }
-  response.body
+  # response = Unirest.post "http://api.img4me.com/?text=Testing&font=arial&fcolor=000000&size=10&bcolor=FFA500&type=png",
+  # headers:{
+  #   "Accept" => "text/plain"
+  # }
+  # response.body
+end
+
+# grabzItClient = GrabzIt::Client.new("YzU3ZDYwZTVhM2JkNDVkZTg4ODA0NzVlNWQ5NTAwNzE=", "ZV8/P35GPz8/Pz8/UiM/P2VNPz8TAT8/JWErPz8/fz8=")
