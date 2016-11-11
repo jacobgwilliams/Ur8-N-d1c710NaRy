@@ -16,6 +16,10 @@ header {
     padding: 10px;
 }
 
+dt {
+  padding-bottom: 10px;
+}
+
 .search > form {
     margin: auto;
     width: 70%;
