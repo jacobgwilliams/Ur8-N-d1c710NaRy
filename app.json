@@ -1,0 +1,16 @@
+{
+  "name": "Ur8-N-d1c710NaRy",
+  "description": "l33t urban dictionary",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
