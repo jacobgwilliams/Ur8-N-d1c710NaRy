@@ -1,0 +1,23 @@
+<div class="search">
+  <form action='/search' method='POST'>
+    <input type='text' name='term' placeholder='3N73R @ W0rd'>
+    <input type='submit' value='D3f1N3' id='define-button'>
+  </form>
+</div>
+
+<% if @term && @definition && @l33t_term && @l33t_definition %>
+  <div class="result">
+    <dl>
+      <article id="noob_def" class="hidden">
+        <dt><%= @term %></dt>
+        <dd><%= @definition %></dd>
+      </article>
+      <article id="l33t_def">
+        <dt><%= @l33t_term %></dt>
+        <dd><%= @l33t_definition %></dd>
+      </article>
+    </dl>
+    <a href='' id='translate_to_noob'>(translate to n00b)</a>
+    <a href='' id='translate_to_leet' class='hidden'>(u W@n7 1t l33t!?)</a>
+  </div>
+<% end %>
