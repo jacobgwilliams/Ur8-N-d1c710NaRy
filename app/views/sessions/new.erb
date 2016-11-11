@@ -1,5 +1,15 @@
 <div class="search">
   <h1><%= l33tify("Login")%></h1>
+
+  <% if @errors && @errors.any? %>
+  <p><%= l33tify("Error")+":" %></p>
+  <ul>
+    <% @errors.each do |error| %>
+    <li class='error'><%= l33tify(error) %></li>
+    <% end %>
+  </ul>
+  <% end %>
+
   <form method="POST" action="/sessions">
     <input type="text" name="username" placeholder="u53RN@M3">
     <input type="password" name="password" placeholder="P@55woRd">

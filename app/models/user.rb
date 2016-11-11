@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_many :faved_definitions
 
-  validates :username, uniqueness: true
+  validates :username, presence: true, uniqueness: true
 
   has_secure_password
 

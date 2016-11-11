@@ -28,3 +28,10 @@ end
 def l33t_greet
   l33tify("welcome") + ", " + l33t_username
 end
+
+def text_to_image
+  response = Unirest.post "http://api.img4me.com/?text=Testing&font=arial&fcolor=000000&size=10&bcolor=FFA500&type=png",
+  headers:{
+    "Accept" => "text/plain"
+  }
+  response.body

@@ -24,7 +24,7 @@
         <% if logged_in? %>
         <li><%= l33t_greet %></li>
         <li><a href="/sessions/logout"><%= l33tify("logout") %></a></li>
-        <li><a href="/users/show"><%= l33tify("favorites") %></a></li>
+        <li><a href="/users/<%= current_user.id %>/faved_definitions"><%= l33tify("favorites") %></a></li>
         <% else %>
         <li><a href="/sessions/new"><%= l33tify("login") %></a></li>
         <li><a href="/users/new"><%= l33tify("register") %></a></li>

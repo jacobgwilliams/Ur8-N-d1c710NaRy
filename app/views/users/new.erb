@@ -1,5 +1,15 @@
 <div class="search">
   <h1><%= l33tify("Register") %></h1>
+
+<% if @user.errors.any? %>
+<p><%= l33tify("Error")+":" %></p>
+<ul>
+  <% @user.errors.full_messages.each do |error| %>
+  <li class='error'><%= l33tify(error) %></li>
+  <% end %>
+</ul>
+<% end %>
+
   <form method="POST" action="/users">
     <input type="text" name="user[username]" placeholder="<%= l33tify("username") %>">
     <input type="password" name="user[password]" placeholder="<%= l33tify("password") %>">
